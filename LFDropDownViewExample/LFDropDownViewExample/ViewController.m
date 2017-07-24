@@ -43,6 +43,7 @@
         _showLabel = [UILabel new];
         CGRect rect = CGRectMake(0, 50.f, ScreenWidth, 30.f);
         _showLabel.frame = rect;
+        _showLabel.text = @"Click to Expand!";
         _showLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _showLabel;

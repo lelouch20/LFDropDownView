@@ -30,9 +30,6 @@
 - (void)initSubViews {
     
     self.label = [UILabel new];
-    [self.contentView addSubview:self.label];
-    CGRect rect = CGRectMake(15.f, 0, self.bounds.size.width - 2 * 15.f, self.bounds.size.height);
-    self.label.frame = rect;
     self.label.text = @"";
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.label];
@@ -46,6 +43,14 @@
         self.label.text = text;
         
     }
+    
+}
+
+- (void)layoutSubviews {
+    
+    [super layoutSubviews];
+    CGRect rect = CGRectMake(15.f, 0, self.bounds.size.width - 2 * 15.f, self.bounds.size.height);
+    self.label.frame = rect;
     
 }
 
